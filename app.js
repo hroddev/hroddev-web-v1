@@ -8,15 +8,18 @@ function PageTranstitions() {
   for (let i = 0; i < sectBtn.length; i++) {
     sectBtn[i].addEventListener("click", function () {
       let currentBtn = document.querySelectorAll(".active-btn");
-      currentBtn[0].className = currentBtn[0].className.replace("active-btn", "");
+      currentBtn[0].className = currentBtn[0].className.replace(
+        "active-btn",
+        ""
+      );
       this.className += " active-btn";
     });
   }
 
   // sections active
-  allSections.addEventListener('click', (e) => {
+  allSections.addEventListener("click", (e) => {
     const id = e.target.dataset.id;
-    console.log(id)
+    console.log(id);
     if (id) {
       // remove selected from the others bottons
       sectBtns.forEach((btn) => {
@@ -32,6 +35,13 @@ function PageTranstitions() {
       const element = document.getElementById(id);
       element.classList.add("active");
     }
+  });
+
+  // Toggle theme
+  const themeBtn = document.querySelector(".theme-btn");
+  themeBtn.addEventListener("click", () => {
+    let element = document.body;
+    element.classList.toggle("light-mode");
   });
 }
 

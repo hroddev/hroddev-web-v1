@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +28,20 @@
   --box-shadow-4: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
+.light-mode {
+  --color-primary: #f8f8f8;
+  --color-secondary: #e2741b;
+  --color-white: #454e56;
+  --color-black: #12181b;
+  --color-grey-0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+}
+
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
@@ -44,7 +59,11 @@ a {
 header {
   height: 100vh;
   color: var(--color-white);
+  font-family: "Poppins", sans-serif;
   overflow: hidden;
+  @media screen and (max-width: 610px) {
+    min-height: 100vh;
+  }
 }
 
 section {
@@ -117,6 +136,7 @@ section {
       color: var(--color-white) !important;
     }
   }
+
   .control {
     padding: 1rem;
     cursor: pointer;
@@ -134,6 +154,38 @@ section {
       color: var(--color-grey-2);
       pointer-events: none;
     }
+    &:hover {
+      background-color: var(--color-secondary) !important;
+      opacity: 0.3;
+      transition: all 0.4s ease-in;
+      i {
+        color: var(--color-white) !important;
+      }
+    }
+  }
+}
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--box-shadow-2);
+  transition: all 0.1s ease-in-out;
+  &:active {
+    transform: translateY(-3px);
+  }
+  i {
+    font-size: 1.4rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
   }
 }
 
@@ -558,7 +610,7 @@ section {
         a {
           display: flex;
           align-items: center;
-          color: var(--color-white);
+          color: var(--color-grey-2);
           background-color: var(--color-grey-5);
           cursor: pointer;
           justify-content: center;
@@ -675,14 +727,17 @@ section {
     }
     .bg-text {
       position: absolute;
-      top: 85%;
+      width: 100%;
+      top: 80%;
       left: 50%;
-      color: var(--color-grey-5);
-      transition: all 0.4s ease-in-out;
+      opacity: 0.15;
+      color: var(--color-grey-2);
+      transition: all 0.1s ease-in-out;
       z-index: -1;
       transform: translate(-50%, -50%);
       font-weight: 800;
-      font-size: 6.3rem;
+      font-size: 4.8rem;
     }
   }
 }
+@import "./media";
