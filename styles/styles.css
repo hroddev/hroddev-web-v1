@@ -58,7 +58,6 @@ header {
   height: 100vh;
   color: var(--color-white);
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
 }
 @media screen and (max-width: 610px) {
   header {
@@ -724,7 +723,7 @@ section {
   font-size: 4.8rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 200px) and (max-width: 1200px) {
   header {
     padding: 0;
   }
@@ -826,6 +825,7 @@ section {
     margin: 1rem 0.5rem;
   }
 }
+/* 
 @media screen and (min-width: 600px) and (max-width: 1400px) {
   .section {
     padding: 7rem 11rem;
@@ -837,29 +837,42 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     padding: 6rem 0;
+    .left-contact h4 {
+      display: none;
+    }
+    .contact-info {
+      font-size: 1rem;
+    }
+    .right-contact {
+      grid-row: 1;
+      margin-left: 0;
+      margin-bottom: 3rem;
+    }
   }
-  .contact-container .left-contact h4 {
-    display: none;
-  }
-  .contact-container .contact-info {
-    font-size: 1rem;
-  }
-  .contact-container .right-contact {
-    grid-row: 1;
-    margin-left: 0;
-    margin-bottom: 3rem;
-  }
+
   .contact-social-icon {
     margin-left: 0;
     justify-content: center;
   }
+
   .contact-container .right-contact .input-name-email {
     flex-direction: column;
   }
+
   .contact-container .right-contact .input-name-email :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
   }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    .right-about {
+      padding-top: 2.5rem;
+    }
+  }
+}
+ */
 
 /*# sourceMappingURL=styles.css.map */

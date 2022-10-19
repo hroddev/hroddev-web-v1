@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 200px) and (max-width: 1200px){
   header {
     padding: 0;
   }
@@ -120,14 +120,14 @@
     }
   }
 }
-
+/* 
 @media screen and (min-width: 600px) and (max-width: 1400px) {
-    .section {
-        padding: 7rem 11rem;
-    }
-    header {
-        padding: 0;
-    }
+  .section {
+    padding: 7rem 11rem;
+  }
+  header {
+    padding: 0;
+  }
   .contact-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -159,3 +159,13 @@
     margin-top: 1.5rem;
   }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    .right-about {
+      padding-top: 2.5rem;
+    }
+  }
+}
+ */
