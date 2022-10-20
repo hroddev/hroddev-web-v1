@@ -304,6 +304,13 @@ section {
   text-transform: uppercase;
 }
 
+.circle {
+  width: 500px;
+  height: 500px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
 .about-stats {
   padding-bottom: 4rem;
 }

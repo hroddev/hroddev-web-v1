@@ -296,6 +296,7 @@ section {
         }
       }
     }
+    
   }
   .left-about {
     padding-right: 5rem;
@@ -309,6 +310,13 @@ section {
       text-transform: uppercase;
     }
   }
+}
+
+.circle {
+  width: 500px;
+  height: 500px;
+  background-color:  var(--color-white);
+  border-radius: 50%;
 }
 
 .about-stats {
