@@ -60,7 +60,7 @@ header {
   height: 100vh;
   color: var(--color-white);
   font-family: "Poppins", sans-serif;
-//   overflow: hidden;
+  //   overflow: hidden;
   @media screen and (max-width: 610px) {
     min-height: 100vh;
   }
@@ -233,11 +233,12 @@ section {
     flex-direction: column;
     justify-content: center;
     padding-right: 18rem;
+    .title {
+      font-size: 2rem;
+    }
     .name {
+      color: var(--color-secondary);
       font-size: 3rem;
-      span {
-        color: var(--color-secondary);
-      }
     }
     p {
       margin: 1.5rem 0;
@@ -249,14 +250,15 @@ section {
 // About
 
 .about-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  // grid-template-columns: repeat(2, 1fr);
   padding-top: 3.5rem;
   padding-bottom: 5rem;
   .right-about {
-    display: grid;
+    flex: 1;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 2rem; */
     .about-item {
       border: 1px solid var(--color-grey-5);
       border-radius: 5px;
@@ -296,27 +298,39 @@ section {
         }
       }
     }
-    
   }
   .left-about {
-    padding-right: 5rem;
+    flex: 3;
+    // padding-right: 5rem;
     p {
       line-height: 2rem;
-      padding: 1rem;
+      margin-bottom: 10px;
+      // padding-top: 1rem;
       color: var(--color-grey-1);
+    }
+    p :last-child {
+      margin-bottom: 2rem;
     }
     h4 {
       font-size: 2rem;
       text-transform: uppercase;
     }
   }
-}
-
-.circle {
-  width: 500px;
-  height: 500px;
-  background-color:  var(--color-white);
-  border-radius: 50%;
+  .circle {
+    img {
+      width: 250px;
+      height: 250px;
+      filter: grayscale(1);
+      margin-left: 3rem;
+      margin-bottom: 3rem;
+      transition: all 0.4s ease-out;
+      &:hover {
+        filter: grayscale(0);
+        transition: all 0.4s ease-out;
+        transform: translateY(-5px);
+      }
+    }
+  }
 }
 
 .about-stats {
@@ -392,6 +406,33 @@ section {
     transform: translateX(-50%);
   }
 }
+.card-wrappler {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: var(--color-grey-4);
+    .card {
+      margin: auto;
+    }
+    .icon {
+      
+      font-size: 4.3rem;
+      color: var(--color-secondary);
+    }
+    .text-card {
+      text-align: center;
+    }
+  }
+
+}
+
 
 // Timeline
 .timeline {
@@ -693,6 +734,7 @@ section {
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-top: 2rem;
   .btn-text {
     padding: 0 2rem;
   }
