@@ -43,6 +43,7 @@ body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
+  letter-spacing: 1px;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
 }
@@ -229,15 +230,23 @@ section {
   flex-direction: column;
   justify-content: center;
   padding-right: 18rem;
+  color: var(--color-secondary);
 }
 .header-content .right-header .title {
-  font-size: 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 .header-content .right-header .name {
-  color: var(--color-secondary);
+  color: var(--color-grey-1);
   font-size: 3rem;
+  font-weight: 700;
+}
+.header-content .right-header .wdev {
+  color: var(--color-grey-3);
+  font-size: 2.5rem;
 }
 .header-content .right-header p {
+  color: var(--color-grey-2);
   margin: 1.5rem 0;
   line-height: 2rem;
 }
@@ -479,7 +488,7 @@ section {
 .portfolios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   margin-top: 3rem;
 }
 .portfolios .portfolio-item {
@@ -602,43 +611,50 @@ section {
 
 .contact-container {
   display: flex;
-  padding-top: 3.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
 }
-.contact-container .left-contact {
-  flex: 2;
-}
-.contact-container .left-contact h4 {
-  margin-top: 1rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-.contact-container .left-contact p {
+.contact-container p {
+  max-height: 100%;
   margin: 1rem 0;
   line-height: 2rem;
 }
-.contact-container .left-contact .contact-info .contact-item {
+.contact-container button {
+  margin-top: 3rem;
+  border: solid 1px var(--color-secondary);
+  background-color: transparent;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.contact-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.contact-container .left-contact .contact-info .contact-item p {
+.contact-item p {
   margin: 0.3rem 0 !important;
   padding: 0 !important;
 }
-.contact-container .left-contact .contact-info .contact-item .icon {
+.contact-item .icon {
   display: grid;
   grid-template-columns: 40px 1fr;
 }
-.contact-container .left-contact .contact-info .contact-item .icon i {
+.contact-item .icon i {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
 }
-.contact-container .left-contact .contact-info .contact-social-icon {
+
+.contact-social-icon {
+  position: fixed;
   display: flex;
-  margin-top: 2rem;
+  left: 45%;
+  bottom: 1rem;
 }
-.contact-container .left-contact .contact-info .contact-social-icon a {
+.contact-social-icon a {
   display: flex;
   align-items: center;
   color: var(--color-grey-2);
@@ -651,48 +667,17 @@ section {
   margin: 0 0.4rem;
   transition: all 0.4 ease-in-out;
 }
-.contact-container .left-contact .contact-info .contact-social-icon a:hover {
+.contact-social-icon a:hover {
   background-color: var(--color-secondary);
 }
-.contact-container .left-contact .contact-info .contact-social-icon a:hover i {
+.contact-social-icon a:hover i {
   color: var(--color-primary);
 }
-.contact-container .left-contact .contact-info .contact-social-icon a i {
+.contact-social-icon a i {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-}
-.contact-container .right-contact {
-  flex: 3;
-  margin-left: 3rem;
-}
-.contact-container .right-contact .input-control {
-  margin: 1.5rem 0;
-}
-.contact-container .right-contact .input-control input,
-.contact-container .right-contact .input-control textarea {
-  border-radius: 30px;
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
-  padding: 0.8rem 1.1rem;
-  outline: none;
-  border: none;
-  background-color: var(--color-grey-5);
-  width: 100%;
-  color: var(--color-white);
-  resize: none;
-}
-.contact-container .right-contact .input-name-email {
-  display: flex;
-}
-.contact-container .right-contact .input-name-email :last-child {
-  margin-left: 1.5rem;
-}
-.contact-container .right-contact .submit-btn {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .btn-container {
@@ -702,7 +687,8 @@ section {
 
 .main-btn {
   border-radius: 30px;
-  color: inherit;
+  color: var(--color-white);
+  background-color: inherit;
   font-weight: 600;
   position: relative;
   border: 1px solid var(--color-secondary);
@@ -789,8 +775,14 @@ section {
     width: 90%;
     margin: 0 auto;
   }
-  .right-header .name {
-    font-size: 2.5rem !important;
+  .right-header .title {
+    line-height: 2.5rem;
+  }
+  .right-header .title .name {
+    font-size: 2rem;
+  }
+  .right-header .title .wdev {
+    font-size: 1.5rem;
   }
   .header-content .left-header .image {
     margin: 0 auto;
@@ -831,31 +823,42 @@ section {
     padding-bottom: 6rem;
   }
   .contact-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 6rem 0;
-  }
-  .contact-container .left-contact h4 {
-    display: none;
-  }
-  .contact-container .contact-info {
-    font-size: 1rem;
-  }
-  .contact-container .right-contact {
-    grid-row: 1;
-    margin-left: 0;
-    margin-bottom: 3rem;
+    width: 100%;
   }
   .contact-social-icon {
+    position: static;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+  /* .contact-social-icon {
     margin-left: 0;
     justify-content: center;
   }
+
   .contact-container .right-contact .input-name-email {
     flex-direction: column;
   }
+
   .contact-container .right-contact .input-name-email :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
+  } */
+  .card-wrappler {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .card-wrappler .cards-container {
+    width: 150px;
+    height: 150px;
+  }
+  .card-wrappler .cards-container .icon {
+    font-size: 3.5rem;
+  }
+  .card-wrappler .cards-container .text-card {
+    font-size: 0.7rem;
   }
   .section {
     padding: 2rem 2rem;
@@ -874,6 +877,13 @@ section {
     margin: 1rem 0.5rem;
   }
 }
+.main-title h2 {
+  font-size: 3rem;
+}
+.main-title h2 .bg-text {
+  font-size: 4rem;
+}
+
 /* 
 @media screen and (min-width: 600px) and (max-width: 1400px) {
   .section {

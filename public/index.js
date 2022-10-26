@@ -2,6 +2,7 @@ const sections = document.querySelectorAll(".section");
 const sectBtns = document.querySelectorAll(".controls");
 const sectBtn = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
+const btnProjects = document.querySelector(".btn-projects");
 
 function PageTranstitions() {
   // button click active class
@@ -19,7 +20,6 @@ function PageTranstitions() {
   // sections active
   allSections.addEventListener("click", (e) => {
     const id = e.target.dataset.id;
-    console.log(id);
     if (id) {
       // remove selected from the others bottons
       sectBtns.forEach((btn) => {

@@ -1,4 +1,4 @@
-@media screen and (min-width: 200px) and (max-width: 1200px){
+@media screen and (min-width: 200px) and (max-width: 1200px) {
   header {
     padding: 0;
   }
@@ -26,8 +26,14 @@
     grid-row: 1;
     width: 90%;
     margin: 0 auto;
-    .name {
-      font-size: 2.5rem !important;
+    .title {
+      line-height: 2.5rem;
+      .name {
+        font-size: 2rem;
+      }
+      .wdev {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -37,7 +43,6 @@
   }
 
   .about-container {
-
     flex-direction: column-reverse;
     // grid-template-columns: 1fr;
     .right-about {
@@ -80,24 +85,19 @@
     padding-bottom: 6rem;
   }
 
-  .contact-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 6rem 0;
-    .left-contact h4 {
-      display: none;
-    }
-    .contact-info {
-      font-size: 1rem;
-    }
-    .right-contact {
-      grid-row: 1;
-      margin-left: 0;
-      margin-bottom: 3rem;
-    }
+  .contact-container{
+    width: 100%;
   }
 
   .contact-social-icon {
+    position: static;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  
+
+  /* .contact-social-icon {
     margin-left: 0;
     justify-content: center;
   }
@@ -109,6 +109,24 @@
   .contact-container .right-contact .input-name-email :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
+  } */
+
+  .card-wrappler {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    .cards-container {
+      width: 150px;
+      height: 150px;
+      .icon {
+        font-size: 3.5rem;
+      }
+      .text-card {
+        font-size: 0.7rem;
+      }
+    }
   }
 
   .section {
@@ -127,6 +145,13 @@
     .control {
       margin: 1rem 0.5rem;
     }
+  }
+}
+
+.main-title h2 {
+  font-size: 3rem;
+  .bg-text {
+    font-size: 4rem;
   }
 }
 /* 
