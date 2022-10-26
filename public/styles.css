@@ -428,6 +428,7 @@ section {
 }
 .card-wrappler .cards-container .text-card {
   text-align: center;
+  color: var(--color-grey-0);
 }
 
 .timeline {
