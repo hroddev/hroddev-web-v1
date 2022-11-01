@@ -2,7 +2,6 @@
   "name": "hroddev-web-v1",
   "version": "1.0.0",
   "description": "My first web portfolio",
-  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "sass --watch styles/styles.scss public/styles.css"
